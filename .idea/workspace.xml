@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="539daa23-64b0-4af1-8234-e7aef178acac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casamiento/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casamiento/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casamiento/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leti/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/leti/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leti/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/leti/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invitar_pareja_familia.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="invitar_pareja_familia.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+            <state relative-caret-position="146">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
             </state>
           </provider>
         </entry>
@@ -84,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leti/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+            <state relative-caret-position="758">
+              <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -108,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/leti/settings.py" />
         <option value="$PROJECT_DIR$/leti/urls.py" />
         <option value="$PROJECT_DIR$/casamiento/templates/casamiento/confirmar_ok.html" />
         <option value="$PROJECT_DIR$/casamiento/templates/casamiento/confirmar.html" />
@@ -116,6 +110,7 @@
         <option value="$PROJECT_DIR$/casamiento/views.py" />
         <option value="$PROJECT_DIR$/casamiento/admin.py" />
         <option value="$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html" />
+        <option value="$PROJECT_DIR$/leti/settings.py" />
       </list>
     </option>
   </component>
@@ -333,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leti/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/confirmar_ok.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -396,8 +384,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+        <state relative-caret-position="146">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leti/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="758">
+          <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
         </state>
       </provider>
     </entry>
