@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 from casamiento.views import importar_invitados_csv, invitar_pareja_familia, confirmar_invitado, invitar_individual
 from casamiento.views import guardar_confirmacion
@@ -26,5 +28,4 @@ urlpatterns = [
     url(r'^invitacion/(?P<id_invitado>\d+)/$', invitar_individual),
     url(r'^confirmar-invitado/(?P<id_invitado>\d+)/$', confirmar_invitado, name="confirmar_invitado"),
     url(r'^guardar-confirmacion/(?P<id_invitado>\d+)/$', guardar_confirmacion, name="guardar_confirmacion"),
-
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
