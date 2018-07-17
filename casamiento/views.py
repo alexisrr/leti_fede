@@ -29,7 +29,7 @@ def importar_invitados_csv(request):
                 grupo = Grupo.objects.filter(nombre='Normal').first()
 
             if grupo_csv == 2:
-                grupo = Grupo.objects.filter(nombre='Despues de 12').first()
+                grupo = Grupo.objects.filter(nombre='Fiesta').first()
 
             invitado = Invitado(
                 nombre=nombre,
