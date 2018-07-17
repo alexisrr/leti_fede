@@ -1,0 +1,112 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ d_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+</head>
+
+<body>
+
+    <div class="corona"></div>
+    <div class="card">
+        <h1>
+            {{ d_name }}
+        </h1>
+        <div class="tx-noscasamos"></div>
+        <div class="txt-noscasamos">
+            ¡Nos Casamos y queremos que nos acompañes!
+        </div>
+        <div class="block">
+            <div class="col">
+                <div class="custom-box-a">
+                    <div class="calendario"></div>
+                    <div class="tv"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-box-b">
+                    <div class="col-a">
+                        <div class="anillos"></div>
+                        <h2>Templo Sagrado Corazón de Jesús Adoratrices</h2>
+                        <p>Sierras Chicas Ruta E53 Ascochinga - Córdoba.</p>
+                        <a class="btn" href="#">Como llegar</a>
+                    </div>
+                    <div class="col-b">
+                        <div class="copas"></div>
+                        <h2>Estancia El Rosal</h2>
+                        <p>Ruta E53, Agua de Oro</p>
+                        <a class="btn" href="#">Ver Mapa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col custom">
+                <div class="txt-regalo">
+                    Tu mejor regalo es nuestra luna de miel
+                </div>
+                <div class="col-c">
+                    <div class="list">
+                        <h4>Banco Galicia</h4>
+                    <ul>
+                        <li>Titular: <b>Leticia Flores</b></li>
+                        <li>N° cta: <b>4085825-0 076-3</b></li>
+                        <li>CBU: <b>00700764 30004085825032</b></li>
+                        <li>CUIT: <b>27-34688667-1</b></li>
+                        <li>Alias de CBU : <b>fedeyleti</b></li>
+                    </ul>
+                    </div>
+                    <div class="maletas"></div>
+                </div>
+
+            </div>
+            <div class="col custom">
+                <div class="lines"></div>
+                <div class="txt-confirmar">
+                    Confirmar Asistencia
+                </div>
+                <h3>Hasta el 17 de agosto</h3>
+                <a class="btn" href="#">Confirmar</a>
+            </div>
+        </div>
+    </div>
+
+    {% if pareja %}
+    <ul>
+    {% for invitado in pareja.invitados %}
+        <li>
+            <a href="{% url 'confirmar_invitado' id_invitado=invitado.id %}">{{ invitado.apellido|upper }} - {{ invitado.nombre }}</a>
+            {% if invitado.confirmado %}
+                CONFIRMADO
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <ul>
+        <li>
+            <a href="{% url 'confirmar_invitado' id_invitado=invitado.id %}">{{ invitado.apellido|upper }} - {{ invitado.nombre }}</a>
+            {% if invitado.confirmado %}
+                CONFIRMADO
+            {% endif %}
+        </li>
+    </ul>
+    {% endif %}
+
+    <div class="firma">
+        <div class="bg-letyyfede">
+            <div class="letyyfede">
+            </div>
+        </div>
+        <div class="blockwhite"></div>
+    </div>
+
+</body>
+</html>
+

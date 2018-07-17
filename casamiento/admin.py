@@ -11,12 +11,14 @@ class GrupoAdmin(admin.ModelAdmin):
 
 class InvitadoAdmin(admin.ModelAdmin):
     list_display = [f.name for f in Invitado._meta.fields]
+    list_display.append('url_invitacion')
     list_filter = ['invitacion_enviada', 'confirmado', 'grupo', 'menu']
     search_fields = ['nombre', 'apellido']
 
 
 class ParejaFamiliaAdmin(admin.ModelAdmin):
-    list_display = [f.name for f in ParejaFamilia._meta.fields]
+    list_display = ['nombre_pareja_familia', 'get_invitados', 'url_invitacion', 'invitacion_enviada']
+    search_fields = ['invitado__nombre', 'invitado__apellido']
 
 
 class MenuAdmin(admin.ModelAdmin):

@@ -25,7 +25,7 @@ SECRET_KEY = 'k&tm-aftrvu2!tc7c=o-fy%rrf5+*7k_oz6lmtn#^_e_5d%28s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'fedeyleti.com.ar']
 
 
 # Application definition

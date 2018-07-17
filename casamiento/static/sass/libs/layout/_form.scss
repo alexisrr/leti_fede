@@ -1,0 +1,220 @@
+.forms-elements {
+    width: 80%;
+    margin:50px auto;
+    background: #f2f2f2;
+    padding: 20px;
+    @include border-radius(10px);
+}
+form {
+    @include formToggles($fontSize, $lineHeight, 3, $primary, $secondary, $disable);
+    .groupform {
+        position: relative;
+    }
+    label {
+        font-size: 16px;
+        line-height: 30px;
+        width: 100%;
+        display: block;
+        font-weight: 300;
+    }
+    small {
+        width: 100%;
+        display: block;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }     
+    select, input {
+        border:1px solid #CCC;
+        @include border-radius(5px);
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        font-size: 16px;
+        font-weight: 300;
+        background: #FFF;
+        outline: 0;
+        width: 100%;
+        @include placeholder {
+            font-size: 16px;
+            font-weight: 300;
+        }
+        @include tablet {
+            width: 100%;
+        }
+    }
+    select {
+        float:left;
+        width:60px;
+        height:38px;
+        border:2px solid $color-primary;
+    }
+    input {
+        
+        font-weight: 500;
+        &:focus {
+            border:1px solid $color-primary;
+            @include placeholder {
+                color: transparent;
+            }
+        }
+    }
+    .error {  
+        width: 100%;
+        text-align: right;
+        color: #ff0000;
+        font-size: 14px;
+        right: -15px;
+        @include border-radius(6px);
+        padding: 3px;
+        display: block;
+    }
+}
+
+.formulario {
+    background:#FFF;
+        padding:5px;
+    .wrap {
+
+        border:2px solid $color-primary;
+        padding:20px;
+            &:after {
+            @extend .clear;
+        }
+    }
+    h1 {
+        font-size:18px;
+        font-family:$font-m;
+        font-weight:500;
+    }
+    span {
+        font-size:15px;
+        color:$color-primary;
+        text-align:center;
+        margin-bottom:20px;
+        display:block;
+        width:100%;
+        font-family: $font-r;
+    }
+    .group-form {
+        width:100%;
+        .row {
+
+        }
+    .row {
+        width:40%;
+        margin:0 5%;
+        float:left;
+        margin-bottom:10px;
+        @include laptop {
+            width:50%;
+            margin:0 0 10px;
+        }
+        @include tablet {
+            width:80%;
+            margin:10px 0 0 20px;
+        }
+        @include mobile {
+            width:100%;
+            margin:0 0 10px;
+        }
+      p {
+        float:left;
+        line-height:38px;
+        font-family: $font-r;
+        font-size:16px;
+        text-transform: uppercase;
+        color:#555555;
+        @include tablet {
+            font-size:15px;
+        }
+      }
+      select {
+
+
+      }
+    }
+
+            &:after {
+            @extend .clear;
+        }
+
+    }
+            &:after {
+            @extend .clear;
+        }
+}
+
+.myselect {
+    position:relative;
+    float:left;
+    margin:0 10px;
+      select {
+        border:2px solid $color-primary;
+      }
+    &:after {
+    @include arrow(down, 8px, $color-primary);
+    content:'';
+    display:block;
+    right:8px;
+    top:16px;
+    position:absolute;
+    }
+    select {
+        position:relative;
+        z-index:99999;
+        background:transparent;
+    }
+}
+
+
+.ingredientes {
+    .row {
+      width:90%;
+      margin:30px 5%;
+      p {
+        float:left;
+        line-height:38px;
+        font-family: $font-m;
+        font-size:15px;
+
+        color:$color-primary;
+      }
+
+      &:after {
+        @extend .clear;
+      }
+    }
+    .toggles {
+        .label {
+            width:20%;
+            float:left;
+
+
+            @include laptop {
+                width:30%;
+            }
+        }
+        label.checkbox {
+        font-family:$font-r;
+        width:20%;
+        float:left;
+        @include laptop {
+            width:30%;
+        }
+        @include tablet {
+            width:40%;
+            margin:0 5%;
+        }
+        @include mobile {
+            width:50%;
+            margin:0;
+        }
+            &:hover {
+            cursor:pointer;
+            }
+        &:before {
+            @include border-radius(5px);
+        }
+        }
+    }
+}

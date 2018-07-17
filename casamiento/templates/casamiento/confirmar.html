@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ invitado.nombre }} - Confirmar Asistencia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+</head>
+<body>
+    <div class="corona"></div>
+    <div class="card">
+        <form name="confirmar" id="confirmar_invitacion" action="{% url 'guardar_confirmacion' id_invitado=invitado.id %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="id_invitado" value="{{ invitado.id }}" />
+            <div class="formulario">
+                <div class="wrap">
+                    <h1>Antes de confirmar, necesitamos que nos cuentes algunas cositas:</h1>
+                    <span>(Seleccioná lo que consideres necesario para que podamos cumplir con tus expectativas)</span>
+
+                    <div class="group-form">
+                        <div class="myselect">
+                            <label for="menu_id">Preferencia de Menu</label>
+                            <select name="menu_id" id="menu_id">
+                                <option value="-1" selected="selected">Seleccione su menu preferido</option>
+                                {% for menu in menus %}
+                                    <option value="{{ menu.id }}">{{ menu.nombre }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="group-form" id="otro_menu_box">
+                        <label for="otro_menu">Especifique otro Menu</label>
+                        <textarea cols="30" rows="3" name="otro" id="otro_menu"></textarea>
+                    </div>
+
+                    <div class="group-form">
+                        <input type="submit" value="Confirmar Invitacion">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="firma">
+        <div class="bg-letyyfede">
+            <div class="letyyfede">
+            </div>
+        </div>
+        <div class="blockwhite"></div>
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        let $menu_select = $("#menu_id");
+        let $otro_menu_box =$('#otro_menu_box');
+        $otro_menu_box.hide();
+
+        $menu_select.on('change', function(){
+            if($menu_select.val() === '4') {
+                $otro_menu_box.show();
+            };
+        });
+    });
+</script>
+</html>

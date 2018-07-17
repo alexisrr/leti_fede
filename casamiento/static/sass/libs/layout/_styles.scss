@@ -1,0 +1,364 @@
+body {
+    background:#FFF url("../images/bg.jpg") no-repeat center;
+    background-size: cover;
+    @include tablet {
+        background: #eed77f;
+    }   
+}
+
+$font-r:'Roboto', sans-serif;
+$font-m:'Montserrat', sans-serif;
+$font-k: 'Kaushan Script', cursive;
+$color-primary:#a19548;
+
+.corona {
+    width:202px;
+    height:47px;
+    margin:10px auto 10px;
+    displaY:block;
+    background:url("../images/corona.png") no-repeat;
+}
+
+.bg-letyyfede {
+    width:269px;
+    height:84px;
+    margin:10px auto 10px;
+    displaY:block;
+    padding:10px 20px;
+    background:url("../images/bg-letyyfede.png") no-repeat;
+}
+
+
+.letyyfede {
+    width:192px;
+    height:66px;
+    margin:10px auto;
+    displaY:block;
+    background:url("../images/letyfede.png") no-repeat;
+}
+
+
+.card {
+    width: 900px;
+    height: auto;
+    padding: 0 20px;
+    margin: 0 auto;
+    @include laptop {
+        width: 100%;
+    }
+    .txt-noscasamos {
+        font-family: $font-k;
+        color: $color-primary;
+        font-size: 35px;
+        margin: 10px auto 30px;
+        text-align: center;
+    }
+    h1 {
+        font-family: $font-m;
+        font-size: 25px;
+        text-align: center;
+        font-weight: 700;
+        color: $color-primary;
+    }
+    .tx-noscasamos {
+        width: 625px;
+        height: 63px;
+        background:url("../images/tx-noscasamos.png");
+        display: block;
+        margin: 0 auto 30px;
+        display: none;
+    }
+    .anillos {
+        width:  143px;
+        height: 65px;
+        background:url("../images/anillos.png");
+        display:block;
+
+    }
+    .calendario {
+        width: 154px;
+        height: 129px;
+        background:url("../images/calendario.png");
+        display:block;    
+    }
+    .copas {
+        width: 106px;
+        height: 104px;
+        background:url("../images/copas.png");
+        display:block;    
+    }
+    .letyyfede {
+        width: 192px;
+        height: 66px;
+        background:url("../images/letyyfede.png");
+        display:block;    
+    }
+    .maletas {
+        width: 154px;
+        height: 129px;
+        background:url("../images/maletas.png");
+        display:block;
+    }
+    .tv {
+        width: 154px;
+        height: 129px;
+        background:url("../images/tv.png");
+        display:block;    
+    }
+    &:after {
+    @extend .clear;
+    }
+}
+
+.col {
+    width: 50%;
+    float: left;
+    min-height: 230px;
+    position: relative;
+    @include tablet {
+        float: none;
+        margin: 0 auto;
+        border: 0;
+        width: 100%;
+        min-height: auto;
+    }
+    .lines {
+        height: 140px;
+        width: 4px;
+        display: block;
+        border-left: 4px dotted $color-primary;
+        float: left;
+        @include tablet {
+            display: none;
+        }        
+    }
+    .custom-box-a {
+        width: 90%;
+        float: left;
+
+        margin: 45px 0 0 10px;
+        @include tablet {
+            margin:0;
+            width: 310px;
+            margin: 0 auto;
+            float:none;
+            
+        }
+        .calendario {
+            float: left;
+        }
+        .tv {
+            float: right;
+        }
+        &:after {
+            @extend .clear;
+        }
+    }
+    .custom-box-b {
+        width: 400px;
+        margin: 5px 20px;
+        @include tablet {
+            margin: 0;
+            width: 380px;
+            margin: 10px auto 20px;
+        }
+        @include mobile {
+            width: 100%;
+        }
+        .col-a {
+            width: 50%;
+            float: left;
+            @include tablet {
+                width: 200px;
+            }
+            @include mobile {
+                width: 180px;
+            }
+            .anillos {
+                margin: 11px auto 5px;
+            }
+            h2 {
+                font-family: $font-m;
+                font-weight: bold;
+                font-size: 15px;
+                color: #a19548;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            p {
+                font-family: $font-r;
+                color: #a19548;
+                font-size: 13px;
+                text-align: center;
+            }
+        }
+        .col-b {
+            float: right;
+            width: 50%;
+            @include tablet {
+                width: 170px;
+            }
+            .copas {
+                margin: 5px auto 0px;
+                @include mobile {
+                    margin: 20px auto 0;
+                }
+            }
+            h2 {
+                font-family: $font-m;
+                font-weight: bold;
+                font-size: 15px;
+                color: #a19548;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            p {
+                font-family: $font-r;
+                color: #a19548;
+                font-size: 13px;
+                text-align: center;
+            }            
+        }
+        &:after {
+            @extend .clear; 
+        }
+    }
+    .txt-regalo {
+        font-family: $font-k;
+        color: $color-primary;
+        font-size: 23px;
+        margin: 10px 0 30px 0;
+        @include tablet {
+            text-align: center;
+        }
+    }
+
+        .col-c {
+            margin: 20px 0;
+            width: 100%;
+            @include tablet {
+                width: 360px;
+                margin: 0 auto;
+            }
+            .list {
+                font-family: $font-r;
+                font-size: 13px;
+                float: left;
+                margin-left: 10px;
+                color: $color-primary;
+                @include tablet {
+                    margin-left: 8px;
+                }
+                h4 {
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+                ul {
+                    li {
+                        font-family: $font-r;
+                        font-size: 13px;
+                        line-height: 20px;
+                        b {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .maletas {
+                float: right;
+                margin-right: 20px;
+                margin-top: -20px;
+                @include laptop {
+                    margin-right: 0;
+                }
+                @include tablet {
+                    margin-right: -10px;
+                    margin-top: 10px;
+                    
+                }
+            }
+            &:after {
+                @extend .clear;
+            }
+        }    
+    .txt-confirmar {
+        font-family: $font-k;
+        color: $color-primary;
+        font-size: 36px;
+        margin: 20px auto;  
+        text-align: center;
+    }    
+
+    h3 {
+        font-family: $font-m;
+        color: $color-primary;
+        text-align: center;
+        font-weight: bold;
+        margin-top:-8px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    &:first-child {
+        border-right: 4px dotted $color-primary;
+        border-bottom: 4px dotted $color-primary;
+        @include tablet {
+            border: 0;
+        }
+    }
+    &:last-child {
+        border-top: 4px dotted $color-primary;
+        /*border-left: 4px dotted $color-primary;*/
+        position: relative;
+        left: -4px;
+        top: -4px;
+        @include tablet {
+            border: 0;
+        }        
+    }
+}
+
+.col.custom {
+    min-height:auto;
+    .col-c {
+        margin-bottom:0;
+    }
+}
+
+.firma {
+    position:relative;
+    .bg-letyyfede {
+        position:relative;
+        top:0px;
+        z-index:10;
+        @include tablet {
+        	top:40px;
+        }
+    }
+    .blockwhite {
+        width:100%;
+        height:200px;
+        background:#FFF;
+        display:block;
+        position:relative;
+        top: -40px;
+        z-index:9;
+        @include tablet {
+        	top:0;
+        }
+    }
+}
+
+.btn {
+    @include button(136px, 35px, #fff, $color-primary, 13px, $font-m);
+    border: 1px solid $color-primary;
+    border-bottom: 4px solid $color-primary;
+    font-weight: 500;
+    margin: 15px auto;
+    &:hover {
+        @include opacity(0.9); 
+        border-bottom-color:#FFF;
+        background: $color-primary;
+        color:#FFF;
+        }       
+}

@@ -1,0 +1,15 @@
+@mixin button($width, $height, $background, $font-color, $font-size, $font-family  ) {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-family;
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+    background: $background;
+    margin:0 auto;
+    color: $font-color;
+    line-height: 45px;
+    text-decoration: none;
+    line-height: $height;
+    }
