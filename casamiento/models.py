@@ -25,8 +25,8 @@ class Invitado(models.Model):
     invitacion_enviada = models.BooleanField(default=False)
     confirmado = models.BooleanField(default=False)
     confirmado_el = models.DateTimeField(null=True, blank=True)
-    grupo = models.ForeignKey(Grupo, null=True)
-    menu = models.ForeignKey(Menu, null=True)
+    grupo = models.ForeignKey(Grupo, null=True, blank=True)
+    menu = models.ForeignKey(Menu, null=True, blank=True)
 
     def url_invitacion(self):
         pf = ParejaFamilia.objects.filter(invitado=self.id).first()
