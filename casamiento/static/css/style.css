@@ -631,6 +631,14 @@ body {
     z-index: 20;
     display:none;
 }
+.modal-nombres p.already_confirmed {
+    color: #a19548;
+    font-family: "Montserrat", sans-serif;
+    padding:0.5rem;
+}
+.modal-nombres p.already_confirmed strong {
+    font-weight: bold;
+}
 
 .modal-nombres h2 {
     font-family: "Kaushan Script", cursive;

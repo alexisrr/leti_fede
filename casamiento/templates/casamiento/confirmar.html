@@ -88,10 +88,9 @@
                         <div class="row">
                             <div class="myselect">
                                 <select name="menu_id" id="menu_id">
-                                    <option value="-1" selected="selected">Seleccione su menu preferido</option>
                                     {% for menu in menus %}
-                                    <option value="{{ menu.id }}">{{ menu.nombre }}</option>
-                                {% endfor %}
+                                    <option value="{{ menu.id }}" {% if menu.nombre == 'Sin especificaciones' %}selected="selected"{% endif %}>{{ menu.nombre }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>

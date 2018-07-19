@@ -49,6 +49,12 @@ def invitar_pareja_familia(request, id_pareja_familia):
     pareja_familia = None
     d_name = None
 
+    invitado_confirmado = request.GET.get('invitado_confirmado')
+    invitado_confirmado_obj = None
+
+    if invitado_confirmado is not None:
+        invitado_confirmado_obj = Invitado.objects.get(pk=invitado_confirmado)
+
     if int(decoded) == int(id_pareja_familia):
         pareja_familia = ParejaFamilia.objects.get(pk=id_pareja_familia)
         pareja_familia.invitados = pareja_familia.invitado.all()
@@ -67,6 +73,7 @@ def invitar_pareja_familia(request, id_pareja_familia):
         'pareja': pareja_familia,
         'd_name': d_name,
         'id': id_pareja_familia,
+        'invitado_confirmado_obj': invitado_confirmado_obj
     }
 
     return render(request, 'casamiento/invitar_pareja_familia.html', context)
@@ -76,6 +83,12 @@ def invitar_individual(request, id_invitado):
     decoded = base64.b64decode(str(request.GET.get('id')))
     invitado = None
 
+    invitado_confirmado = request.GET.get('invitado_confirmado')
+    invitado_confirmado_obj = None
+
+    if invitado_confirmado is not None:
+        invitado_confirmado_obj = Invitado.objects.get(pk=invitado_confirmado)
+
     if int(decoded) == int(id_invitado):
         invitado = Invitado.objects.get(pk=id_invitado)
 
@@ -83,6 +96,7 @@ def invitar_individual(request, id_invitado):
         'invitado': invitado,
         'd_name': invitado.nombre,
         'id': id_invitado,
+        'invitado_confirmado_obj': invitado_confirmado_obj
     }
 
     return render(request, 'casamiento/invitar_pareja_familia.html', context)
@@ -122,10 +136,12 @@ def guardar_confirmacion(request, id_invitado):
     in_pareja = ParejaFamilia.objects.filter(invitado=invitado).first()
 
     if in_pareja is not None:
-        return redirect(in_pareja.url_invitacion_clean())
+        redirect_url = '{}&invitado_confirmado={}'.format(in_pareja.url_invitacion_clean(), id_invitado)
+        return redirect(redirect_url)
 
     if in_pareja is None:
-        return redirect(invitado.url_invitacion_clean())
+        redirect_url = '{}&invitado_confirmado={}'.format(invitado.url_invitacion_clean(), id_invitado)
+        return redirect(redirect_url)
 
 
 def principal(request):

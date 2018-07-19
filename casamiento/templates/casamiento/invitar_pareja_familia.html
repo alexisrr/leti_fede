@@ -99,6 +99,9 @@
     {% if pareja %}
         <div class="modal-nombres">
             <h2>Invitados</h2>
+            {% if invitado_confirmado_obj %}
+                <p class="already_confirmed"><strong>{{ invitado_confirmado_obj.nombre }}</strong>: Confirmación exitosa !</p>
+            {% endif %}
             <ul>
             {% for invitado in pareja.invitados %}
                 <li>
@@ -113,6 +116,9 @@
     {% else %}
     <div class="modal-nombres">
         <h2>Invitados</h2>
+        {% if invitado_confirmado_obj %}
+            <p class="already_confirmed"><strong>{{ invitado_confirmado_obj.nombre }}</strong>: Confirmación exitosa !</p>
+        {% endif %}
         <ul>
             <li>
                 <a href="{% url 'confirmar_invitado' id_invitado=invitado.id %}">
@@ -148,6 +154,12 @@
             $the_modal.fadeOut('fast');
             $modal_nombres.hide();
         });
+
+        {% if invitado_confirmado_obj %}
+            $the_modal.fadeIn('fast', function(){
+                $modal_nombres.show();
+            });
+        {% endif %}
 
     });
 </script>
