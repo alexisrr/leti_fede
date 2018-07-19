@@ -72,31 +72,36 @@
                     Confirmar Asistencia
                 </div>
                 <h3>Hasta el 17 de agosto</h3>
-                <a class="btn" href="#">Confirmar</a>
+                <a class="btn btn-confirmar" href="#">Confirmar</a>
             </div>
         </div>
     </div>
 
     {% if pareja %}
-    <ul>
-    {% for invitado in pareja.invitados %}
-        <li>
-            <a href="{% url 'confirmar_invitado' id_invitado=invitado.id %}">{{ invitado.apellido|upper }} - {{ invitado.nombre }}</a>
-            {% if invitado.confirmado %}
-                CONFIRMADO
-            {% endif %}
-        </li>
-    {% endfor %}
-    </ul>
+        <div class="modal-nombres">
+            <h2>Invitados</h2>
+            <ul>
+            {% for invitado in pareja.invitados %}
+                <li>
+                    <a href="{% url 'confirmar_invitado' id_invitado=invitado.id %}">{{ invitado.nombre }}</a>
+                    {% if invitado.confirmado %}
+                        CONFIRMADO
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
     {% else %}
-    <ul>
-        <li>
-            <a href="{% url 'confirmar_invitado' id_invitado=invitado.id %}">{{ invitado.apellido|upper }} - {{ invitado.nombre }}</a>
-            {% if invitado.confirmado %}
-                CONFIRMADO
-            {% endif %}
-        </li>
-    </ul>
+    <div class="modal-nombres">
+        <h2>Invitados</h2>
+        <ul>
+            <li>
+                <a href="{% url 'confirmar_invitado' id_invitado=invitado.id %}">
+                    {{ invitado.nombre }} {% if invitado.confirmado %}<span>Confirmado!</span>{% endif %}
+                </a>
+            </li>
+        </ul>
+    </div>
     {% endif %}
 
     <div class="firma">
@@ -107,6 +112,25 @@
         <div class="blockwhite"></div>
     </div>
 
+    <div class="bg-modal"></div>
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        let $modal_nombres = $('.modal-nombres');
+        let $open_modal = $('.btn-confirmar');
+        let $the_modal = $('.bg-modal');
+
+        $open_modal.on('click', function(){
+            $the_modal.fadeIn('fast', function(){
+                $modal_nombres.show();
+            });
+        });
+        $the_modal.on('click', function(){
+            $the_modal.fadeOut('fast');
+            $modal_nombres.hide();
+        });
+
+    });
+</script>
 </html>
 

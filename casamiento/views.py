@@ -58,7 +58,7 @@ def invitar_pareja_familia(request, id_pareja_familia):
             pareja_familia.grupo = grupo
 
         if len(pareja_familia.invitados) == 2:
-            d_name = " y ".join(['{} - {}'.format(p.apellido.upper(), p.nombre) for p in pareja_familia.invitados])
+            d_name = " y ".join(['{}'.format(p.nombre) for p in pareja_familia.invitados])
 
         if len(pareja_familia.invitados) > 2:
             d_name = ", ".join(['{}'.format(p.nombre) for p in pareja_familia.invitados])
@@ -126,3 +126,7 @@ def guardar_confirmacion(request, id_invitado):
 
     if in_pareja is None:
         return redirect(invitado.url_invitacion_clean())
+
+
+def principal(request):
+    return render(request, 'casamiento/principal.html')

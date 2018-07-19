@@ -13,38 +13,95 @@
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 </head>
 <body>
+
     <div class="corona"></div>
     <div class="card">
+        <h1>
+            Selccion de preferencias
+        </h1>
+        <div class="tx-noscasamos"></div>
+        <div class="txt-noscasamos">
+            ¡Nos Casamos y queremos que nos acompañes!
+        </div>
+        <div class="block">
+            <div class="col">
+                <div class="custom-box-a">
+                    <div class="calendario"></div>
+                    <div class="tv"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-box-b">
+                    <div class="col-a">
+                        <div class="anillos"></div>
+                        <h2>Templo Sagrado Corazón de Jesús Adoratrices</h2>
+                        <p>Sierras Chicas Ruta E53 Ascochinga - Córdoba.</p>
+                        <a class="btn" href="#">Como llegar</a>
+                    </div>
+                    <div class="col-b">
+                        <div class="copas"></div>
+                        <h2>Estancia El Rosal</h2>
+                        <p>Ruta E53, Agua de Oro</p>
+                        <a class="btn" href="#">Ver Mapa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col custom">
+                <div class="txt-regalo">
+                    Tu mejor regalo es nuestra luna de miel
+                </div>
+                <div class="col-c">
+                    <div class="list">
+                        <h4>Banco Galicia</h4>
+                    <ul>
+                        <li>Titular: <b>Leticia Flores</b></li>
+                        <li>N° cta: <b>4085825-0 076-3</b></li>
+                        <li>CBU: <b>00700764 30004085825032</b></li>
+                        <li>CUIT: <b>27-34688667-1</b></li>
+                        <li>Alias de CBU : <b>fedeyleti</b></li>
+                    </ul>
+                    </div>
+                    <div class="maletas"></div>
+                </div>
+
+            </div>
+            <div class="col custom">
+                <div class="lines"></div>
+                <div class="txt-confirmar">
+                    Confirmar Asistencia
+                </div>
+                <h3>Hasta el 17 de agosto</h3>
+                <a class="btn btn-confirmar" href="#">Confirmar</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-menu">
+        <h2>Especifique menú especial</h2>
         <form name="confirmar" id="confirmar_invitacion" action="{% url 'guardar_confirmacion' id_invitado=invitado.id %}" method="POST">
             {% csrf_token %}
             <input type="hidden" name="id_invitado" value="{{ invitado.id }}" />
             <div class="formulario">
                 <div class="wrap">
-                    <h1>Antes de confirmar, necesitamos que nos cuentes algunas cositas:</h1>
-                    <span>(Seleccioná lo que consideres necesario para que podamos cumplir con tus expectativas)</span>
-
                     <div class="group-form">
-                        <div class="myselect">
-                            <label for="menu_id">Preferencia de Menu</label>
-                            <select name="menu_id" id="menu_id">
-                                <option value="-1" selected="selected">Seleccione su menu preferido</option>
-                                {% for menu in menus %}
+                        <div class="row">
+                            <div class="myselect">
+                                <select name="menu_id" id="menu_id">
+                                    <option value="-1" selected="selected">Seleccione su menu preferido</option>
+                                    {% for menu in menus %}
                                     <option value="{{ menu.id }}">{{ menu.nombre }}</option>
                                 {% endfor %}
-                            </select>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="group-form" id="otro_menu_box">
-                        <label for="otro_menu">Especifique otro Menu</label>
-                        <textarea cols="30" rows="3" name="otro" id="otro_menu"></textarea>
-                    </div>
-
-                    <div class="group-form">
-                        <input type="submit" value="Confirmar Invitacion">
+                        <div id="otro_menu_box">
+                            <textarea cols="30" rows="3" name="otro" id="otro_menu"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
+            <input type="submit" class="btnconfirmar" value="Confirmar Invitacion">
         </form>
     </div>
 
@@ -56,18 +113,21 @@
         <div class="blockwhite"></div>
     </div>
 
+    <div class="bg-modal" style="display:block"></div>
+
 </body>
 <script type="text/javascript">
     $(document).ready(function(){
-        let $menu_select = $("#menu_id");
-        let $otro_menu_box =$('#otro_menu_box');
-        $otro_menu_box.hide();
+        let $modal_nombres = $('.modal-menu');
+        let $open_modal = $('.btn-confirmar');
+        let $the_modal = $('.bg-modal');
 
-        $menu_select.on('change', function(){
-            if($menu_select.val() === '4') {
-                $otro_menu_box.show();
-            };
+        $open_modal.on('click', function(){
+            $the_modal.fadeIn('fast', function(){
+                $modal_nombres.show();
+            });
         });
+
     });
 </script>
 </html>

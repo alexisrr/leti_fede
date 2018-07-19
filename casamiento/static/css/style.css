@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -120,6 +110,26 @@ body {
     }
 }
 
+.sininvitacion {
+    min-height: 100vh;
+    background: #efd983;
+}
+
+@media only screen and (max-width: 768px) {
+    .sininvitacion .firma .bg-letyyfede {
+        top: 0;
+    }
+}
+
+.sininvitacion .posicionar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+
 .corona {
     width: 202px;
     height: 47px;
@@ -141,6 +151,14 @@ body {
     width: 192px;
     height: 66px;
     margin: 10px auto;
+    displaY: block;
+    background: url("../images/letyfede.png") no-repeat;
+}
+
+.letyyfede2 {
+    width: 192px;
+    height: 66px;
+    margin: 0px auto;
     displaY: block;
     background: url("../images/letyfede.png") no-repeat;
 }
@@ -225,6 +243,13 @@ body {
     display: block;
 }
 
+.card .tv2 {
+    width: 154px;
+    height: 129px;
+    background: url("../images/tv2.png");
+    display: block;
+}
+
 .col {
     width: 50%;
     float: left;
@@ -275,7 +300,7 @@ body {
     float: left;
 }
 
-.col .custom-box-a .tv {
+.col .custom-box-a .tv, .col .custom-box-a .tv2 {
     float: right;
 }
 
@@ -370,6 +395,11 @@ body {
     color: #a19548;
     font-size: 13px;
     text-align: center;
+}
+
+.col .col-b.centrado {
+    float: none;
+    margin: 0 auto;
 }
 
 .col .txt-regalo {
@@ -557,6 +587,161 @@ body {
     color: #FFF;
 }
 
+.btnconfirmar {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    width: 236px;
+    height: 35px;
+    font-size: 13px;
+    background: #a19548;
+    margin: 0 auto;
+    color: #FFF;
+    line-height: 45px;
+    text-decoration: none;
+    line-height: 35px;
+    border: 1px solid #a19548;
+    border-bottom: 4px solid #a19548;
+    font-weight: 500;
+    margin: 15px auto;
+}
+
+.btnconfirmar:hover {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    background: #FFF;
+    color: #a19548;
+}
+
+.modal-nombres {
+    background: #FFF;
+    border: 4px solid #4c430a;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+    min-width: 400px;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 20;
+    display:none;
+}
+
+.modal-nombres h2 {
+    font-family: "Kaushan Script", cursive;
+    color: #a19548;
+    font-size: 36px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.modal-nombres ul {
+    padding: 10px 20px;
+    border: 1px dashed #CCC;
+}
+
+.modal-nombres ul li {
+    font-family: "Montserrat", sans-serif;
+    color: #a19548;
+    text-align: left;
+    font-size: 18px;
+    margin: 10px 0;
+    list-style: cambodian;
+    list-style-position: inside;
+}
+
+.modal-nombres ul li a {
+    color: #6d621b;
+    text-decoration: none;
+}
+
+.modal-nombres ul li a:hover {
+    text-decoration: underline;
+}
+
+.modal-nombres ul li span {
+    margin-left: 10px;
+    text-align: right;
+    width: 100px;
+    font-weight: 300;
+    font-size: 16px;
+    float: right;
+}
+
+.modal-menu {
+    background: #FFF;
+    border: 4px solid #4c430a;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+    min-width: 400px;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.modal-menu h2 {
+    font-family: "Kaushan Script", cursive;
+    color: #a19548;
+    font-size: 36px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.modal-menu ul {
+    padding: 10px 20px;
+    border: 1px dashed #CCC;
+}
+
+.modal-menu ul li {
+    font-family: "Montserrat", sans-serif;
+    color: #a19548;
+    text-align: left;
+    font-size: 18px;
+    margin: 10px 0;
+    list-style: cambodian;
+    list-style-position: inside;
+}
+
+.modal-menu ul li a {
+    color: #6d621b;
+    text-decoration: none;
+}
+
+.modal-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.modal-menu ul li span {
+    margin-left: 10px;
+    text-align: right;
+    width: 100px;
+    font-weight: 300;
+    font-size: 16px;
+    float: right;
+}
+
+.bg-modal {
+    position:absolute;
+    top:0;left:0;
+    background: #000;
+    opacity: 0.6;
+    height: 100vh;
+    width: 100%;
+    z-index:19;
+    display:none;
+}
+
 .forms-elements {
     width: 80%;
     margin: 50px auto;
@@ -728,11 +913,19 @@ form select, form input {
     form select, form input {
       width: 100%; } }
 
+form textarea {
+  border: 1px solid #a19548;
+  margin: 20px 0 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px; }
+
 form select {
-  float: left;
-  width: 60px;
-  height: 38px;
-  border: 2px solid #a19548; }
+  width: 280px;
+  height: 45px;
+  border: 2px solid #a19548;
+  margin: 0 auto;
+  color: #a19548; }
 
 form input {
   font-weight: 500; }
@@ -763,9 +956,6 @@ form .error {
 .formulario {
   background: #FFF;
   padding: 5px; }
-  .formulario .wrap {
-    border: 2px solid #a19548;
-    padding: 20px; }
   .formulario h1 {
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
@@ -781,22 +971,11 @@ form .error {
   .formulario .group-form {
     width: 100%; }
     .formulario .group-form .row {
-      width: 40%;
-      margin: 0 5%;
-      float: left;
-      margin-bottom: 10px; }
-      @media only screen and (max-width: 960px) {
-        .formulario .group-form .row {
-          width: 50%;
-          margin: 0 0 10px; } }
+      width: 300px;
+      margin: 0 auto; }
       @media only screen and (max-width: 768px) {
         .formulario .group-form .row {
-          width: 80%;
-          margin: 10px 0 0 20px; } }
-      @media only screen and (max-width: 480px) {
-        .formulario .group-form .row {
-          width: 100%;
-          margin: 0 0 10px; } }
+          width: 100%; } }
       .formulario .group-form .row p {
         float: left;
         line-height: 38px;
@@ -824,8 +1003,8 @@ form .error {
     border-left: 8px solid transparent;
     content: '';
     display: block;
-    right: 8px;
-    top: 16px;
+    right: 12px;
+    top: 20px;
     position: absolute; }
   .myselect select {
     position: relative;

@@ -42,11 +42,21 @@ form {
             width: 100%;
         }
     }
+    textarea {
+        border: 1px solid $color-primary;  
+        margin: 20px 0 0;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        
+    }
     select {
-        float:left;
-        width:60px;
-        height:38px;
+
+        width: 280px;
+        height:45px;
         border:2px solid $color-primary;
+        margin: 0 auto;
+        color: #a19548;
     }
     input {
         
@@ -75,8 +85,8 @@ form {
         padding:5px;
     .wrap {
 
-        border:2px solid $color-primary;
-        padding:20px;
+        
+       
             &:after {
             @extend .clear;
         }
@@ -101,21 +111,17 @@ form {
 
         }
     .row {
-        width:40%;
-        margin:0 5%;
-        float:left;
-        margin-bottom:10px;
+        width:300px;
+        margin:0 auto;
+        
         @include laptop {
-            width:50%;
-            margin:0 0 10px;
+
         }
         @include tablet {
-            width:80%;
-            margin:10px 0 0 20px;
+            width: 100%;
         }
         @include mobile {
-            width:100%;
-            margin:0 0 10px;
+
         }
       p {
         float:left;
@@ -155,8 +161,8 @@ form {
     @include arrow(down, 8px, $color-primary);
     content:'';
     display:block;
-    right:8px;
-    top:16px;
+    right:12px;
+    top:20px;
     position:absolute;
     }
     select {
