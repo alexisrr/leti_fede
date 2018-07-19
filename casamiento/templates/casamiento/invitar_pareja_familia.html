@@ -28,24 +28,43 @@
             <div class="col">
                 <div class="custom-box-a">
                     <div class="calendario"></div>
-                    <div class="tv"></div>
+                    {% if pareja %}
+                        {% for invitado in pareja.invitados %}
+                            {% if forloop.counter == 1 %}
+                                {% if invitado.grupo.nombre == 'Normal' %}
+                                    <div class="tv"></div>
+                                {% else %}
+                                    <div class="tv2"></div>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% if invitado.grupo.nombre == 'Normal' %}
+                            <div class="tv"></div>
+                        {% else %}
+                            <div class="tv2"></div>
+                        {% endif %}
+                    {% endif %}
                 </div>
             </div>
             <div class="col">
-                <div class="custom-box-b">
-                    <div class="col-a">
-                        <div class="anillos"></div>
-                        <h2>Templo Sagrado Corazón de Jesús Adoratrices</h2>
-                        <p>Sierras Chicas Ruta E53 Ascochinga - Córdoba.</p>
-                        <a class="btn" href="#">Como llegar</a>
-                    </div>
-                    <div class="col-b">
-                        <div class="copas"></div>
-                        <h2>Estancia El Rosal</h2>
-                        <p>Ruta E53, Agua de Oro</p>
-                        <a class="btn" href="#">Ver Mapa</a>
-                    </div>
-                </div>
+                {% if pareja %}
+                    {% for invitado in pareja.invitados %}
+                        {% if forloop.counter == 1 %}
+                            {% if invitado.grupo.nombre == 'Normal' %}
+                                {% include 'casamiento/mapas_normal.html' %}
+                            {% else %}
+                                {% include 'casamiento/mapas_no_normal.html' %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    {% if invitado.grupo.nombre == 'Normal' %}
+                        {% include 'casamiento/mapas_normal.html' %}
+                    {% else %}
+                        {% include 'casamiento/mapas_no_normal.html' %}
+                    {% endif %}
+                {% endif %}
             </div>
             <div class="col custom">
                 <div class="txt-regalo">

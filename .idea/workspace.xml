@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="539daa23-64b0-4af1-8234-e7aef178acac" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casamiento/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casamiento/static/sass/libs/layout/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/static/sass/libs/layout/_form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casamiento/static/sass/libs/layout/_styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/static/sass/libs/layout/_styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casamiento/templates/casamiento/confirmar.html" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/templates/casamiento/confirmar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casamiento/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/casamiento/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leti/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/leti/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +29,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/casamiento/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+            <state relative-caret-position="182">
+              <caret line="99" column="47" lean-forward="true" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -47,13 +41,31 @@
       <file leaf-file-name="invitar_pareja_familia.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="114" column="32" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="32" />
+            <state relative-caret-position="441">
+              <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="confirmar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mapas_no_normal.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/mapas_no_normal.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mapas_normal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/mapas_normal.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confirmar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/confirmar.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="758">
@@ -123,6 +135,7 @@
       <find>firma</find>
       <find>modal-no</find>
       <find>modal-nomn</find>
+      <find>tv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,8 +152,10 @@
         <option value="$PROJECT_DIR$/casamiento/templates/casamiento/principal.html" />
         <option value="$PROJECT_DIR$/casamiento/static/css/style.css" />
         <option value="$PROJECT_DIR$/casamiento/views.py" />
-        <option value="$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html" />
         <option value="$PROJECT_DIR$/casamiento/templates/casamiento/confirmar.html" />
+        <option value="$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html" />
+        <option value="$PROJECT_DIR$/casamiento/templates/casamiento/mapas_normal.html" />
+        <option value="$PROJECT_DIR$/casamiento/templates/casamiento/mapas_no_normal.html" />
       </list>
     </option>
   </component>
@@ -179,6 +194,13 @@
               <item name="leti_fede" type="462c0819:PsiDirectoryNode" />
               <item name="casamiento" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leti_fede" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leti_fede" type="462c0819:PsiDirectoryNode" />
+              <item name="casamiento" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="casamiento" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="leti_fede" type="b2602c69:ProjectViewProjectNode" />
@@ -589,10 +611,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/confirmar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="758">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/casamiento/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+        <state relative-caret-position="182">
+          <caret line="99" column="47" lean-forward="true" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
@@ -601,18 +633,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/invitar_pareja_familia.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="114" column="32" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="32" />
+        <state relative-caret-position="441">
+          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/confirmar.html">
+    <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/mapas_normal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/casamiento/templates/casamiento/mapas_no_normal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
         </state>
       </provider>
     </entry>
