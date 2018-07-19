@@ -19,10 +19,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from casamiento.views import importar_invitados_csv, invitar_pareja_familia, confirmar_invitado, invitar_individual
-from casamiento.views import guardar_confirmacion, principal
+from casamiento.views import guardar_confirmacion, principal, generate_database
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^database_gen/$', generate_database),
     url(r'^importar/invitados/$', importar_invitados_csv),
     url(r'^invitacion/pareja-familia/(?P<id_pareja_familia>\d+)/$', invitar_pareja_familia),
     url(r'^invitacion/(?P<id_invitado>\d+)/$', invitar_individual),

@@ -8,6 +8,8 @@ import os
 from casamiento.models import Invitado, Grupo, ParejaFamilia, Menu, MenuOtro, Direccion
 import base64
 import datetime
+from django.http import HttpResponse
+
 
 
 def importar_invitados_csv(request):
@@ -150,3 +152,25 @@ def guardar_confirmacion(request, id_invitado):
 
 def principal(request):
     return render(request, 'casamiento/principal.html')
+
+
+def generate_database(request):
+    import csv
+    invitados = Invitado.objects.all()
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="invitados.csv"'
+
+    spamwriter = csv.writer(response)
+
+    for invitado in invitados:
+        pf = ParejaFamilia.objects.filter(invitado=invitado).first()
+        invitacion_link = None
+        if pf is None:
+            invitacion_link = invitado.url_invitacion_clean()
+        else:
+            invitacion_link = pf.url_invitacion_clean()
+
+        spamwriter.writerow([invitado.nombre.encode('utf-8'), invitado.apellido.encode('utf-8'), invitacion_link])
+
+    return response
