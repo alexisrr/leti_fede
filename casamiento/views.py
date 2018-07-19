@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from leti.settings import BASE_DIR
 import os
 
-from casamiento.models import Invitado, Grupo, ParejaFamilia, Menu, MenuOtro
+from casamiento.models import Invitado, Grupo, ParejaFamilia, Menu, MenuOtro, Direccion
 import base64
 import datetime
 
@@ -73,7 +73,9 @@ def invitar_pareja_familia(request, id_pareja_familia):
         'pareja': pareja_familia,
         'd_name': d_name,
         'id': id_pareja_familia,
-        'invitado_confirmado_obj': invitado_confirmado_obj
+        'invitado_confirmado_obj': invitado_confirmado_obj,
+        'iglesia': Direccion.objects.filter(slug='la_iglesia').first(),
+        'el_rosal': Direccion.objects.filter(slug='el_rosal').first(),
     }
 
     return render(request, 'casamiento/invitar_pareja_familia.html', context)
@@ -96,7 +98,9 @@ def invitar_individual(request, id_invitado):
         'invitado': invitado,
         'd_name': invitado.nombre,
         'id': id_invitado,
-        'invitado_confirmado_obj': invitado_confirmado_obj
+        'invitado_confirmado_obj': invitado_confirmado_obj,
+        'iglesia': Direccion.objects.filter(slug='la_iglesia').first(),
+        'el_rosal': Direccion.objects.filter(slug='el_rosal').first(),
     }
 
     return render(request, 'casamiento/invitar_pareja_familia.html', context)
