@@ -336,7 +336,7 @@ body {
 
 @media only screen and (max-width: 480px) {
     .col .custom-box-b .col-a {
-        width: 180px;
+        width: 141px;
     }
 }
 
@@ -367,7 +367,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .col .custom-box-b .col-b {
-        width: 170px;
+        width: 136px;
     }
 }
 
@@ -471,8 +471,10 @@ body {
 
 @media only screen and (max-width: 768px) {
     .col .col-c .maletas {
-        margin-right: -10px;
-        margin-top: 10px;
+        margin: 0 auto;
+        display: block;
+        clear: both;
+        float: none;
     }
 }
 
